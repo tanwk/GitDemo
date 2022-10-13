@@ -5,6 +5,7 @@
  */
 package ejb.session.singleton;
 
+import entity.Person;
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
 import javax.ejb.LocalBean;
@@ -32,6 +33,11 @@ public class DataInitSessionBean
     
     @PostConstruct
     public void postConstruct()
-    {        
+    {
+        em.persist(new Person("Person A"));
+        em.persist(new Person("Person B"));
+        em.persist(new Person("Person C"));
+        em.persist(new Person("Person D"));
+        em.persist(new Person("Person E"));
     }
 }
