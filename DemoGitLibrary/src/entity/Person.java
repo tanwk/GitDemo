@@ -25,6 +25,8 @@ public class Person implements Serializable {
     private Long personId;
     @Column(length = 32)
     private String firstName;
+    @Column(length = 32)
+    private String lastName;
 
     
     
@@ -80,6 +82,14 @@ public class Person implements Serializable {
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
     
 }
