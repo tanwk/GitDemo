@@ -23,7 +23,7 @@ public class Person implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long personId;
-    @Column(length = 32)
+    @Column(length = 64)
     private String firstName;
     @Column(length = 32)
     private String lastName;
